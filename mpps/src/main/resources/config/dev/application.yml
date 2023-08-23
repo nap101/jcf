@@ -1,0 +1,36 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /mpps
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+      druid:
+          db1:
+              username: sa
+              password: p@ssw0rd
+              driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+              url: jdbc:sqlserver://192.168.18.218:1433;databaseName=dev_brtpawnbusiness
+              initialSize: 5
+              minIdle: 5
+              maxActive: 20
+          db2:
+              username: sa
+              password: p@ssw0rd
+              driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+              url: jdbc:sqlserver://192.168.18.218:1433;databaseName=SMS
+              initialSize: 5
+              minIdle: 5
+              maxActive: 20
+# Logger Config
+logging:
+  path: /tmp/logs/mpps
+  file:
+    max-size: 10MB
+  group:
+    tomcat: org.apache.catalina, org.apache.coyote, org.apache.tomcat
+  level:
+    root: info
+    #tomcat: error
+    com.brtpawn.mpps: debug

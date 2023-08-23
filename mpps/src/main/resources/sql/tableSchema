@@ -1,0 +1,24 @@
+MySql：
+CREATE TABLE `mpps_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) DEFAULT NULL,
+  `user_name` varchar(50) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
+
+SqlServer
+
+CREATE TABLE [dbo].[mpps_user] (
+  [id] int  NOT NULL,
+  [user_name] varchar(30) COLLATE Chinese_PRC_CI_AS  NULL,
+  [passwd] varchar(64) COLLATE Chinese_PRC_CI_AS  NULL,
+  [age] int  NULL,
+  [email] varchar(50) COLLATE Chinese_PRC_CI_AS  NULL,
+  CONSTRAINT [PK__mpps_use__3213E83F9B3D1573] PRIMARY KEY CLUSTERED ([id])
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+ON [PRIMARY]
+)
+ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[mpps_user] SET (LOCK_ESCALATION = TABLE)
